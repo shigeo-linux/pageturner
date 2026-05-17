@@ -15,7 +15,7 @@ class PageturnerApp(Gtk.Application):
     def __init__(self):
         super().__init__(
             application_id='com.pageturner.app',
-            flags=Gio.ApplicationFlags.FLAGS_NONE
+            flags=Gio.ApplicationFlags.HANDLES_OPEN
         )
 
     def do_activate(self):
@@ -25,6 +25,19 @@ class PageturnerApp(Gtk.Application):
             return
         win = MainWindow(self)
         win.show_all()
+
+    def do_open(self, files, n_files, hint):
+        existing = self.get_windows()
+        if existing:
+            win = existing[0]
+            win.present()
+        else:
+            win = MainWindow(self)
+            win.show_all()
+        if files:
+            path = files[0].get_path()
+            if path:
+                win._open_book(path)
 
 
 def main():
