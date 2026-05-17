@@ -17,6 +17,20 @@ A clean, fast EPUB and PDF reader for Linux with dark mode, sepia mode, bookmark
 
 ---
 
+## Disk space
+
+| Component | Size |
+|---|---|
+| Pageturner app | < 200 KB |
+| python3-gi, gir1.2-gtk-3.0 (usually pre-installed) | ~1.5 MB |
+| gir1.2-webkit2-4.1 + libwebkit2gtk-4.1-0 (usually pre-installed) | ~90 MB |
+| gir1.2-poppler-0.18 | ~110 KB |
+| python3-ebooklib | ~150 KB |
+
+**In practice:** On Ubuntu 24.04 and Linux Mint 22.x, WebKit2GTK and the GTK bindings are almost always already installed as system components, so the additional space needed is typically **under 1 MB**. If starting from a minimal install, allow up to **~100 MB** for all dependencies.
+
+---
+
 ## Requirements
 
 - Ubuntu 24.04, Linux Mint 22.x, or any GTK3-capable Linux
