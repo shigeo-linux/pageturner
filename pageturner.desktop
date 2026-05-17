@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pageturner
+GenericName=Book Reader
+Comment=EPUB and PDF reader with dark mode and reading progress
+Exec=python3 /opt/pageturner/pageturner.py
+Icon=pageturner
+Terminal=false
+Categories=Office;Viewer;
+Keywords=epub;pdf;ebook;reader;
+StartupNotify=true

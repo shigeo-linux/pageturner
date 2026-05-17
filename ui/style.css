@@ -1,0 +1,138 @@
+/* pageturner GTK3 stylesheet */
+
+window {
+    background-color: #f5f4f0;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #2b2d30;
+    color: #d4d0c8;
+}
+
+.sidebar-title {
+    color: #e8dcc8;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 12px 4px 12px;
+}
+
+.toc-row {
+    padding: 5px 12px;
+    border-bottom: 1px solid #232527;
+    color: #c8c4bc;
+    font-size: 13px;
+}
+
+.toc-row:selected,
+.toc-row:selected:focus {
+    background-color: #3d4147;
+    color: #e8dcc8;
+}
+
+.toc-row:hover {
+    background-color: #343740;
+}
+
+.bookmark-row {
+    padding: 5px 12px;
+    border-bottom: 1px solid #232527;
+    color: #c8a96e;
+    font-size: 12px;
+}
+
+.bookmark-row:selected {
+    background-color: #3d4147;
+}
+
+/* Library */
+.library-row {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0dcd4;
+    padding: 4px 0;
+}
+
+.library-row:hover {
+    background-color: #f0ebe0;
+}
+
+.library-row:selected,
+.library-row:selected:focus {
+    background-color: #d4c9a8;
+}
+
+.library-book-title {
+    font-weight: bold;
+    font-size: 13px;
+    color: #1a1208;
+}
+
+.library-book-author {
+    font-size: 11px;
+    color: #5a5040;
+}
+
+/* Toolbar buttons */
+.action-btn {
+    background-color: #c8a96e;
+    color: #1e1c18;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    padding: 5px 14px;
+}
+
+.action-btn:hover {
+    background-color: #d4b87a;
+}
+
+.theme-btn {
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 12px;
+}
+
+.theme-btn-active {
+    background-color: #c8a96e;
+    color: #1e1c18;
+    font-weight: bold;
+}
+
+/* Status bar */
+.status-bar {
+    background-color: #cdc9c0;
+    border-top: 1px solid #b8b4ac;
+    padding: 3px 12px;
+    font-size: 11px;
+    color: #4a4840;
+}
+
+/* Welcome screen */
+.welcome-title {
+    font-size: 30px;
+    font-family: serif;
+    color: #3a3020;
+    font-weight: bold;
+}
+
+.welcome-subtitle {
+    font-size: 14px;
+    color: #7a7060;
+}
+
+spinner {
+    color: #c8a96e;
+}
+
+/* PDF viewer backgrounds */
+.pdf-bg-light {
+    background-color: #e8e4dc;
+}
+
+.pdf-bg-sepia {
+    background-color: #d4c9a8;
+}
+
+.pdf-bg-dark {
+    background-color: #1a1a1a;
+}
