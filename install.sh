@@ -20,14 +20,16 @@ sudo apt-get install -y \
     gir1.2-gtk-3.0 \
     gir1.2-webkit2-4.1 \
     gir1.2-poppler-0.18 \
-    python3-ebooklib
-
-sudo pip3 install --break-system-packages pypdf
+    python3-ebooklib python3-venv
 
 echo "Copying application files..."
 sudo mkdir -p "${INSTALL_DIR}"
 sudo cp -r "$(dirname "$0")"/* "${INSTALL_DIR}/"
 sudo chmod +x "${INSTALL_DIR}/pageturner.py"
+
+echo "Creating virtual environment..."
+sudo python3 -m venv --system-site-packages "${INSTALL_DIR}/venv"
+sudo "${INSTALL_DIR}/venv/bin/pip" install --quiet pypdf
 
 echo "Installing icon..."
 sudo mkdir -p /usr/share/icons/hicolor/scalable/apps
@@ -41,7 +43,7 @@ sudo update-desktop-database "${DESKTOP_DIR}" 2>/dev/null || true
 echo "Creating launcher..."
 sudo tee /usr/local/bin/pageturner > /dev/null << 'EOF'
 #!/bin/bash
-exec python3 /opt/pageturner/pageturner.py "$@"
+exec /opt/pageturner/venv/bin/python3 /opt/pageturner/pageturner.py "$@"
 EOF
 sudo chmod +x /usr/local/bin/pageturner
 
