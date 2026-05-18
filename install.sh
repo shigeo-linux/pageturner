@@ -45,6 +45,9 @@ exec python3 /opt/pageturner/pageturner.py "$@"
 EOF
 sudo chmod +x /usr/local/bin/pageturner
 
+echo "Creating config directory..."
+mkdir -p "$HOME/.config/${APP_NAME}"
+
 echo ""
 echo "=== Installation complete! ==="
 echo "Run: pageturner"
