@@ -22,7 +22,7 @@ sudo apt-get install -y \
     gir1.2-poppler-0.18 \
     python3-ebooklib
 
-pip3 install --user --break-system-packages pypdf 2>/dev/null || true
+sudo pip3 install --break-system-packages pypdf
 
 echo "Copying application files..."
 sudo mkdir -p "${INSTALL_DIR}"
